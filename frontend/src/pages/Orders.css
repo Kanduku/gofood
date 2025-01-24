@@ -1,0 +1,175 @@
+/* Overall container */
+.Orders-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+    padding: 20px;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #2c3e50;
+    box-sizing: border-box;
+}
+
+/* Title */
+.Orders-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Order summary */
+.Orders-summary {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 3px solid #4caf50;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.Orders-detail {
+    font-size: 18px;
+    color: #444;
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
+/* Success message */
+.Orders-successMessage {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #28a745;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin: 20px 0;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(40, 167, 69, 0.5);
+    position: relative;
+    animation: fadeIn 1s ease-in-out, blastEffect 1s ease-out;
+}
+
+/* Tick mark animation */
+.Orders-successMessage::before {
+    content: "✔";
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #28a745;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: bounce 1.5s infinite;
+}
+
+/* Back button */
+.Orders-backButton {
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+}
+
+.Orders-backButton:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+/* Bike delivery animation */
+.Bike-animation {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Scooter.svg/2048px-Scooter.svg.png'); /* Replace with your bike image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: bikeMove 5s linear infinite;
+    bottom: 20%;
+}
+
+/* Explosion effect */
+.Blast-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ff6a00, #ff0000, transparent);
+    border-radius: 50%;
+    animation: blastExpand 1s linear forwards;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -10px);
+    }
+    50% {
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes bikeMove {
+    0% {
+        transform: translateX(-100vw);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes blastExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}

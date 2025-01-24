@@ -1,0 +1,223 @@
+/* Overall container */
+.Checkout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: transparent;
+    padding: 10px;
+    margin-top: 10px;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #2c3e50;
+    box-sizing: border-box;
+}
+
+/* Title */
+.Checkout-title {
+    font-size: 36px;
+    font-weight: 700;
+
+    color: #e65100;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image */
+.Checkout-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    border: 1px solid #ff9800;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    background-color: #fff5e6;
+}
+
+/* Hover effect for the image */
+.Checkout-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: #e65100;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Checkout-image {
+        max-width: 90%;
+        border-radius: 15px;
+    }
+}
+
+/* Item details */
+.Checkout-item,
+.Checkout-price {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Input groups */
+.Checkout-inputGroup {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 15px;
+}
+
+.Checkout-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.Checkout-input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.Checkout-input:focus {
+    border-color: #ff9800;
+    outline: none;
+    box-shadow: inset 0 3px 8px rgba(0, 121, 107, 0.3);
+}
+
+.Checkout-quantity {
+    width: 70px;
+    text-align: center;
+}
+
+.Checkout-textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* Place Order Button */
+.Checkout-placeOrderButton {
+    padding: 14px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 30px;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.5);
+}
+
+.Checkout-placeOrderButton:hover {
+    background-color: orange;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(22, 160, 133, 0.7);
+}
+
+/* Back Button */
+.Checkout-backButton {
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.5);
+}
+
+.Checkout-backButton:hover {
+    background-color: orange;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(41, 128, 185, 0.7);
+}
+
+/* Invalid page message */
+.Checkout-invalid {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.Checkout-invalid p {
+    font-size: 20px;
+    color: #7f8c8d;
+}
+
+.Checkout-invalid .Checkout-backButton {
+    margin-top: 20px;
+}
+
+/* Parent container for the image and form */
+.Checkout-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Ensures the image takes up 50% of the width */
+.Checkout-imageContainer {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Checkout-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Ensures the form takes up 50% of the width */
+.Checkout-form {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .Checkout-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Checkout-imageContainer,
+    .Checkout-form {
+        max-width: 100%;
+    }
+}
+
+/* Loading Spinner */
+.Checkout-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #e65100;
+}

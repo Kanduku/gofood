@@ -1,0 +1,70 @@
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Occupies 40% of the screen width */
+    height: 100vh; /* Full viewport height */
+ /* Light background for better contrast */
+    padding:0 50px;
+/* Subtle shadow for depth */
+  }
+  
+  .content {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .home-title {
+    font-size: 3.5rem; /* Large font size for emphasis */
+    font-weight: bold;
+    color: #2c3e50; /* Darker shade for readability */
+    margin-bottom: 1rem;
+    color: #d35400;
+  }
+  
+  .description {
+    font-size: 1.2rem; /* Medium-sized text for readability */
+    color: #7f8c8d; /* Muted color for secondary information */
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #e74c3c; /* Bright button color for attention */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #c0392b; /* Darker shade on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .home-section {
+      width: 100%; /* Full width on smaller screens */
+      height: auto;
+    }
+  
+    .content {
+      text-align: center; /* Center-align text for smaller screens */
+    }
+  
+    .title {
+      font-size: 2rem; /* Adjust title size */
+    }
+  
+    .description {
+      font-size: 1rem; /* Adjust description size */
+    }
+  
+    .cta-button {
+      padding: 8px 16px; /* Adjust button padding */
+    }
+  }
+  

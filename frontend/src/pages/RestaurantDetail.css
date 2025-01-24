@@ -1,0 +1,151 @@
+/* General Page Layout */
+.restaurant-detail-container {
+  width: 100hw;
+  max-width: 1200px;
+ 
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: transparent;
+  width:75%;
+  margin-left: 18%;
+
+  
+
+}
+@media (max-width: 968px) {
+  .restaurant-detail-images {
+    display: none;
+    width: 0; /* Hide the image on smaller devices */
+  }
+
+  .restaurant-detail-container{
+    width:100hw;
+    margin-left: auto;
+  }
+}
+
+
+.restaurant-detail-images{
+  position: absolute;
+  top: 65%; /* Center vertically */
+  left: -10%; /* Align to the left of the screen */
+  transform: translateY(-50%); /* Adjust for vertical centering */
+  width: 35%; /* Occupy 15% of the screen width */
+  height: 100vh; /* Maintain aspect ratio */
+  z-index: -5;
+
+}
+/* Header Section */
+.restaurant-detail-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.restaurant-detail-name {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.restaurant-detail-location {
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* Banner Image */
+.restaurant-detail-banner {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Cuisine Section */
+.restaurant-detail-cuisine {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Menu Section */
+.restaurant-detail-menu-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.restaurant-detail-menu-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Menu Card Styling */
+.menu-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.menu-card-content {
+  padding:  0 25px;
+}
+
+.menu-card-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.menu-card-desc {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.menu-card-price {
+  font-size: 1.1rem;
+  color: #ff9900;
+  font-weight: bold;
+}
+
+/* Back Button */
+.restaurant-detail-back-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 30px auto;
+  padding: 10px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.restaurant-detail-back-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,136 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background:transparent;
+    backdrop-filter: blur(1px);
+    color: rgb(6, 6, 6);
+    position: relative;
+  }
+  
+  /* Title styling */
+  .navbar-title {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+   
+  }
+  
+  .navbar-title h1 {
+    margin: 0;
+    margin-left: 150px;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* Centered Links */
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    transition: all 0.3s ease;
+   
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin: 5px 40px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #e15840;
+  }
+  
+  /* Logout Button */
+  .navbar-logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 26px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 0;
+ 
+
+  }
+  
+  .navbar-logout-btn:hover {
+    background-color: #d32f2f;
+  
+  }
+  
+  
+  /* Hamburger Menu for mobile */
+  .navbar-hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+  }
+  
+  .navbar .navbar-links button {
+    margin-left: 10px;
+  }
+  
+  /* Active links for mobile */
+  .navbar-links.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-links.active .navbar-link {
+    margin: 10px 0;
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media (max-width: 908px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-links {
+      display: none; /* Hidden by default on mobile */
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .navbar-hamburger {
+      display: block;
+      padding-bottom: 10px;
+
+      margin-top: -35px;/* Display the hamburger icon */
+    }
+  
+    .navbar-links.active {
+      display: flex; /* Show the links when active */
+    }
+  
+    .navbar-title {
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      margin-left: -70px;
+       
+    }
+  
+    .navbar-link {
+      margin: 5px 0;
+    }
+  }
+  
