@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
 import "./Home.css"; // Import the CSS file
 import Dish1 from "./images/food-img-1.png";
 import Dish2 from "./images/food-img-2.png";
@@ -46,15 +45,11 @@ const HomePage = () => {
     return () => {
       clearInterval(intervalId); // Cleanup interval on unmount
     };
-  }, []);
-  
+  }, [itemRefs]); // Added itemRefs to the dependency array
 
   return (
     <div className="bg-image">
       <h6>.</h6>
-      
-
-
       <div className="yufood-slideshow">
         <div className="yucarousel-container" ref={rotatingElementRef}>
           <div className="rote highlighted" ref={itemRefs[0]}>
@@ -73,7 +68,6 @@ const HomePage = () => {
       </div>
       <HomeSection />
       <Restaurants />
-
       <Footer />
     </div>
   );
